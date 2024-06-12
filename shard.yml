@@ -14,4 +14,4 @@ development_dependencies:
     version: "= 1.4.3"
 
 scripts:
-  postinstall: "if not exist ../../sam.cr copy /-y examples/sam.template ../../sam.cr >nul 2>&1"
+  postinstall: "crystal postinstall.cr"
