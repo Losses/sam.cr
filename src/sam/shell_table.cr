@@ -29,7 +29,11 @@ module Sam
     end
 
     private def has_tput?
-      !`which tput`.empty?
+      {% if flag?(:win32) %}
+        false
+      {% else %}
+        !`which tput`.empty?
+      {% end %}
     end
 
     private def has_stty?
